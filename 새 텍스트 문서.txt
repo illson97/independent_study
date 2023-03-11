@@ -1,0 +1,28 @@
+뭐시기 위치로 이동
+
+<a name="뭐시기"></a>
+<a href="#뭐시기"></a>
+
+
+스크롤 부드럽게
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+뭐시기 위치로 이동
+<div id="num1">this is num 1</div>
+<div id="num2">this is num 2</div>
+
+
+<a href="#num1">move to num1</a>
+
+<script>
+  $('a').click(function () {
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+    return false;
+  });
+</script>
